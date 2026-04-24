@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae | Mochamad Resta Fahlefi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cv.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📄</text></svg>">
+</head>
+<body style="background-color: var(--clr-bg);">
+    
+    <!-- Tombol Khusus Web untuk Print/Save PDF -->
+    <div class="btn-download-print" style="position: fixed; top: 20px; right: 20px; z-index: 100;">
+        <button onclick="window.print()" class="btn btn--primary" style="box-shadow: 0 10px 20px rgba(14, 165, 233, 0.4);">
+            🖨️ Cetak / Simpan sebagai PDF
+        </button>
+        <a href="index.html" class="btn btn--outline" style="margin-left: 10px; background: var(--clr-surface);">
+            Kembali ke Web
+        </a>
+    </div>
+
+    <div class="cv-page">
+        <div class="cv-container">
+            
+            <!-- KIRI: Profil & Info -->
+            <aside class="cv-sidebar">
+                <div class="cv-profile">
+                    <!-- Gunakan foto yang ada di web portfolio -->
+                    <img src="assets/images/profile.png" alt="Mochamad Resta Fahlefi" class="cv-profile__img" onerror="this.src='https://ui-avatars.com/api/?name=Resta+Fahlefi&background=0D8ABC&color=fff'">
+                    <h1 class="cv-profile__name">Resta Fahlefi</h1>
+                    <p class="cv-profile__title">Fullstack Software Engineer</p>
+                </div>
+
+                <div class="cv-section">
+                    <h2 class="cv-section__title-light">Kontak</h2>
+                    <div class="cv-contact__item">
+                        <div class="cv-contact__icon">📧</div>
+                        <span>restavalefi1401@gmail.com</span>
+                    </div>
+                    <div class="cv-contact__item">
+                        <div class="cv-contact__icon">📱</div>
+                        <span>085771964134</span>
+                    </div>
+                    <div class="cv-contact__item">
+                        <div class="cv-contact__icon">📍</div>
+                        <span>Jakarta, Indonesia</span>
+                    </div>
+                    <div class="cv-contact__item">
+                        <div class="cv-contact__icon">📸</div>
+                        <a href="https://www.instagram.com/resta.fahlefi/" target="_blank" style="color: inherit; text-decoration: none;">
+                            <span>@resta.fahlefi</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h2 class="cv-section__title-light">Keahlian</h2>
+                    <div class="cv-skills">
+                        <span>JavaScript (ES6+)</span>
+                        <span>TypeScript</span>
+                        <span>React.js</span>
+                        <span>Next.js</span>
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                        <span>MySQL</span>
+                        <span>UI/UX Design</span>
+                        <span>Figma</span>
+                        <span>Tailwind CSS</span>
+                        <span>Git & GitHub</span>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h2 class="cv-section__title-light">Bahasa</h2>
+                    <div class="cv-contact__item">
+                        Indonesia (Native)
+                    </div>
+                    <div class="cv-contact__item">
+                        Inggris (Professional)
+                    </div>
+                </div>
+            </aside>
+
+            <!-- KANAN: Pengalaman & Edukasi -->
+            <main class="cv-main">
+                
+                <div class="cv-section">
+                    <h2 class="cv-section__title-dark">Profil Profesional</h2>
+                    <p class="cv-item__desc" style="margin-bottom: var(--space-xl);">
+                        Fullstack Software Engineer dengan dedikasi tinggi dalam merancang arsitektur sistem yang scalable dan antarmuka digital yang interaktif. Memiliki rekam jejak sukses dalam membangun aplikasi web dari nol hingga tahap produksi (deployment). Ahli dalam ekosistem JavaScript (MERN Stack & Next.js) serta selalu berorientasi pada clean code, performa optimal, dan kepuasan bisnis klien.
+                    </p>
+                </div>
+
+                <div class="cv-section">
+                    <h2 class="cv-section__title-dark">Pengalaman Kerja</h2>
+                    
+                    <div class="cv-item">
+                        <div class="cv-item__header">
+                            <div>
+                                <h3 class="cv-item__title">Senior Frontend Developer</h3>
+                                <p class="cv-item__subtitle">TechNusa Solutions</p>
+                            </div>
+                            <span class="cv-item__date">2023 - Sekarang</span>
+                        </div>
+                        <p class="cv-item__desc">
+                            - Memimpin tim frontend yang terdiri dari 4 developer untuk memigrasikan sistem monolitik lama ke arsitektur micro-frontend menggunakan React dan Next.js.<br>
+                            - Mengoptimalkan Core Web Vitals yang berdampak pada peningkatan load time aplikasi sebesar 40%.<br>
+                            - Bekerja sama erat dengan tim UI/UX untuk mengimplementasikan Design System perusahaan menggunakan Tailwind CSS.
+                        </p>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="cv-item__header">
+                            <div>
+                                <h3 class="cv-item__title">Fullstack Web Developer</h3>
+                                <p class="cv-item__subtitle">Creative Studio Web</p>
+                            </div>
+                            <span class="cv-item__date">2021 - 2023</span>
+                        </div>
+                        <p class="cv-item__desc">
+                            - Membangun dan memelihara lebih dari 15 website E-Commerce dan Company Profile untuk klien dari berbagai industri.<br>
+                            - Mengembangkan RESTful API menggunakan Node.js (Express) dan MongoDB untuk kebutuhan sistem manajemen inventaris.<br>
+                            - Mengintegrasikan sistem pembayaran (Payment Gateway) Midtrans ke dalam alur checkout e-commerce.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h2 class="cv-section__title-dark">Proyek Unggulan</h2>
+                    
+                    <div class="cv-item">
+                        <div class="cv-item__header">
+                            <h3 class="cv-item__title">RestaBlog - CMS Platform</h3>
+                        </div>
+                        <p class="cv-item__desc">
+                            Membangun sistem Content Management System (CMS) fullstack dari nol. Dilengkapi editor WYSIWYG, optimasi SEO dinamis, dan sistem analitik pengunjung. (Tech: Next.js, Node.js, MongoDB).
+                        </p>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="cv-item__header">
+                            <h3 class="cv-item__title">ShopDash - E-Commerce Dashboard</h3>
+                        </div>
+                        <p class="cv-item__desc">
+                            Dashboard admin reaktif untuk memantau data penjualan secara real-time. Dilengkapi visualisasi chart interaktif dan fitur export laporan. (Tech: React, Chart.js, Express, MySQL).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h2 class="cv-section__title-dark">Pendidikan</h2>
+                    
+                    <div class="cv-item">
+                        <div class="cv-item__header">
+                            <div>
+                                <h3 class="cv-item__title">S1 Teknik Informatika</h3>
+                                <p class="cv-item__subtitle">Universitas Bina Sarana Informatika (UBSI)</p>
+                            </div>
+                            <span class="cv-item__date">2022 - 2026</span>
+                        </div>
+                        <p class="cv-item__desc">
+                            Sedang menempuh pendidikan sarjana dengan fokus pada pengembangan perangkat lunak (Software Engineering) dan arsitektur sistem informasi. Aktif dalam mengeksplorasi teknologi web modern dan pengembangan aplikasi fullstack.
+                        </p>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>

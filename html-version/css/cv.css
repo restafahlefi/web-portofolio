@@ -1,0 +1,241 @@
+/* ============================================
+   CV / RESUME STYLES
+   ============================================ */
+
+.cv-page {
+    background-color: var(--clr-bg);
+    min-height: 100vh;
+    padding: var(--space-3xl) var(--space-md);
+    font-family: var(--ff-sans);
+    color: var(--clr-text);
+}
+
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .cv-container {
+        flex-direction: row;
+    }
+}
+
+/* ============================================
+   LEFT SIDEBAR (Profile, Info, Skills)
+   ============================================ */
+.cv-sidebar {
+    background: var(--gradient-primary);
+    color: #fff;
+    padding: var(--space-2xl);
+    flex: 1;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .cv-sidebar {
+        max-width: 340px; /* Diperlebar agar email panjang muat */
+    }
+}
+
+.cv-profile {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.cv-profile__img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.15);
+    margin: 0 auto var(--space-md); /* Dipastikan center otomatis */
+    display: block; /* Memastikan margin auto bekerja */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+.cv-profile__name {
+    font-size: var(--fs-xl);
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+    line-height: 1.2;
+}
+
+.cv-profile__title {
+    font-size: var(--fs-sm);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--ff-mono);
+}
+
+.cv-section {
+    margin-bottom: var(--space-xl);
+}
+
+.cv-section__title-light {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cv-contact__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem; /* Ukuran teks sedikit diperkecil agar email panjang muat */
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.6rem 0.8rem;
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+    word-break: break-word; /* Mencegah teks keluar kotak */
+}
+
+.cv-contact__item:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.cv-contact__icon {
+    font-size: 1.2rem;
+    min-width: 24px;
+    text-align: center;
+    flex-shrink: 0; /* Mencegah ikon gepeng saat teks panjang */
+}
+
+.cv-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cv-skills span {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-xs);
+}
+
+/* ============================================
+   RIGHT MAIN CONTENT
+   ============================================ */
+.cv-main {
+    flex: 2;
+    padding: var(--space-2xl);
+    background: var(--clr-bg-2);
+}
+
+.cv-section__title-dark {
+    font-size: var(--fs-xl);
+    font-weight: 800;
+    color: var(--clr-white);
+    border-bottom: 2px solid var(--clr-accent-1);
+    padding-bottom: 0.5rem;
+    margin-bottom: var(--space-lg);
+    display: inline-block;
+}
+
+.cv-item {
+    margin-bottom: var(--space-xl);
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--clr-border);
+}
+
+.cv-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr-accent-1);
+}
+
+.cv-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.cv-item__title {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--clr-white);
+}
+
+.cv-item__subtitle {
+    font-size: var(--fs-base);
+    color: var(--clr-accent-1);
+    font-weight: 500;
+}
+
+.cv-item__date {
+    font-family: var(--ff-mono);
+    font-size: var(--fs-sm);
+    color: var(--clr-text-muted);
+    background: var(--clr-bg-3);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+}
+
+.cv-item__desc {
+    font-size: var(--fs-sm);
+    color: var(--clr-text);
+    line-height: 1.6;
+}
+
+/* ============================================
+   PRINT STYLES (The Magic Trick!)
+   ============================================ */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .cv-page {
+        padding: 0;
+        background: white;
+    }
+    
+    .cv-container {
+        box-shadow: none;
+        border: none;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    .cv-main {
+        background: white !important;
+    }
+    
+    .cv-item__title, .cv-section__title-dark {
+        color: black !important;
+    }
+    
+    .cv-item__date {
+        background: #f1f5f9;
+        color: #333;
+    }
+    
+    /* Sembunyikan elemen web yang tidak perlu diprint */
+    .btn-download-print, .nav, .footer {
+        display: none !important;
+    }
+}
