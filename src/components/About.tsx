@@ -53,22 +53,17 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 relative group"
           >
-            <div className="relative aspect-square max-w-md mx-auto rounded-[3rem] overflow-hidden border-2 border-white/10 shadow-2xl bg-zinc-900 group">
+            {/* Professional Backdrop Glow */}
+            <div className="absolute inset-0 bg-[#3B82F6]/20 blur-[100px] rounded-full scale-75 -z-10" />
+            
+            <div className="relative aspect-[4/5] max-w-md mx-auto rounded-[3rem] overflow-hidden group">
               <Image 
-                src="/assets/images/profile.png" 
+                src="/assets/images/resta-about.png" 
                 alt="Resta Fahlefi" 
                 fill
-                className="object-cover transition-all duration-700 group-hover:scale-110 filter brightness-110 contrast-110"
-                style={{
-                  maskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
-                  WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
-                }}
+                className="object-cover transition-all duration-700 group-hover:scale-110"
+                priority
               />
-              {/* Color Tint Overlay: This turns the red background into a theme-matching blue/purple */}
-              <div className="absolute inset-0 bg-blue-600/40 mix-blend-color pointer-events-none" />
-              
-              {/* Vignette to blend edges further */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent opacity-80" />
             </div>
             
             {/* Decorative frames */}
