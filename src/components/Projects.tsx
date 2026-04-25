@@ -116,26 +116,26 @@ const Projects = () => {
 
                                 {/* Action Buttons */}
                                 <div className="grid grid-cols-2 gap-3 mb-8">
-                                    <button 
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            handleOpenSpotlight(project);
-                                        }}
+                                    <a 
+                                        href={project.links.live}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()}
                                         className="flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-[10px] font-black uppercase tracking-widest text-white transition-all active:scale-95 shadow-lg shadow-blue-600/20"
                                     >
                                         <ExternalLink size={14} />
                                         <span>Live Demo</span>
-                                    </button>
-                                    <button 
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            handleOpenSpotlight(project, 'code');
-                                        }}
+                                    </a>
+                                    <a 
+                                        href={project.links.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()}
                                         className="flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl text-[10px] font-black uppercase tracking-widest text-white transition-all active:scale-95"
                                     >
                                         <Github size={14} />
                                         <span>Source Code</span>
-                                    </button>
+                                    </a>
                                 </div>
 
                                 <div className="mt-auto">
