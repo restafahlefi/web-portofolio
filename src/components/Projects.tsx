@@ -83,19 +83,23 @@ const Projects = () => {
                         transition={{ duration: 0.5, type: 'spring', bounce: 0.3 }}
                         className="glass-card rounded-[2.5rem] overflow-hidden group border border-white/5 flex flex-col h-full"
                     >
-                        <div 
-                            onClick={() => router.push(`/projects/${project.id}`)}
-                            className="flex flex-col h-full cursor-pointer"
-                        >
+                        <div className="flex flex-col h-full">
                             {/* Image Wrapper */}
-                            <div className="relative aspect-[16/10] overflow-hidden">
+                            <div 
+                                onClick={() => handleOpenSpotlight(project)}
+                                className="relative aspect-[16/10] overflow-hidden cursor-pointer"
+                            >
                                 <Image 
                                     src={project.image} 
                                     alt={project.title}
                                     fill
                                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                                    <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white text-[10px] font-black uppercase tracking-widest">
+                                        View Details
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Content */}
@@ -107,7 +111,10 @@ const Projects = () => {
                                         </span>
                                     ))}
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors leading-tight">
+                                <h3 
+                                    onClick={() => handleOpenSpotlight(project)}
+                                    className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors leading-tight cursor-pointer"
+                                >
                                     {project.title}
                                 </h3>
                                 <p className="text-zinc-500 text-sm leading-relaxed mb-8 line-clamp-3">
@@ -115,12 +122,11 @@ const Projects = () => {
                                 </p>
 
                                 {/* Action Buttons */}
-                                <div className="grid grid-cols-2 gap-3 mb-8">
+                                <div className="grid grid-cols-2 gap-3 mb-8 relative z-20">
                                     <a 
                                         href={project.links.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        onClick={(e) => e.stopPropagation()}
                                         className="flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-[10px] font-black uppercase tracking-widest text-white transition-all active:scale-95 shadow-lg shadow-blue-600/20"
                                     >
                                         <ExternalLink size={14} />
@@ -130,7 +136,6 @@ const Projects = () => {
                                         href={project.links.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        onClick={(e) => e.stopPropagation()}
                                         className="flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl text-[10px] font-black uppercase tracking-widest text-white transition-all active:scale-95"
                                     >
                                         <Github size={14} />
@@ -139,7 +144,10 @@ const Projects = () => {
                                 </div>
 
                                 <div className="mt-auto">
-                                    <div className="group/link inline-flex items-center gap-2 text-white font-bold text-sm tracking-wide">
+                                    <div 
+                                        onClick={() => handleOpenSpotlight(project)}
+                                        className="group/link inline-flex items-center gap-2 text-white font-bold text-sm tracking-wide cursor-pointer"
+                                    >
                                         <span>Lihat Detail</span>
                                         <div className="w-8 h-[2px] bg-blue-500 group-hover:w-12 transition-all duration-300" />
                                     </div>

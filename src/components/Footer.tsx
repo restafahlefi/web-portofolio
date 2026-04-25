@@ -51,10 +51,10 @@ const Footer = () => {
             <h3 className="text-[10px] font-black uppercase tracking-widest text-zinc-600">Connect</h3>
             <div className="flex gap-4">
               {[
-                { icon: <Github size={20} />, href: '#' },
-                { icon: <Linkedin size={20} />, href: '#' },
-                { icon: <Twitter size={20} />, href: '#' },
-                { icon: <Mail size={20} />, href: '#' }
+                { icon: <Github size={20} />, href: 'https://github.com/restafahlefi' },
+                { icon: <Linkedin size={20} />, href: 'https://linkedin.com/in/restafahlefi' },
+                { icon: <Instagram size={20} />, href: 'https://instagram.com/resta.fahlefi' },
+                { icon: <Mail size={20} />, href: 'mailto:restavalefi1401@gmail.com' }
               ].map((social, i) => (
                 <a 
                     key={i} 
@@ -65,7 +65,7 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <p className="text-xs text-zinc-500">hello@rfdev.com</p>
+            <p className="text-xs text-zinc-500">restavalefi1401@gmail.com</p>
           </div>
         </div>
 

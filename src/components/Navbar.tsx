@@ -27,9 +27,9 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: <Github size={18} />, href: '#' },
-    { icon: <Linkedin size={18} />, href: '#' },
-    { icon: <Instagram size={18} />, href: '#' },
+    { icon: <Github size={18} />, href: 'https://github.com/restafahlefi' },
+    { icon: <Linkedin size={18} />, href: 'https://linkedin.com/in/restafahlefi' },
+    { icon: <Instagram size={18} />, href: 'https://instagram.com/resta.fahlefi' },
   ];
 
   return (
