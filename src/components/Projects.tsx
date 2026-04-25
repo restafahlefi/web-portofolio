@@ -74,7 +74,7 @@ const Projects = () => {
             ].map((cat) => (
                 <button
                     key={cat.id}
-                    onClick={() => setFilter(cat.id)}
+                    onClick={() => setFilter(cat.id as any)}
                     className={`px-8 py-3 rounded-2xl text-xs font-black uppercase tracking-widest transition-all duration-300 border ${
                         filter === cat.id 
                         ? 'bg-blue-600 border-blue-600 text-white shadow-xl shadow-blue-600/40' 
