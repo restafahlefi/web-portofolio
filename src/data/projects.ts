@@ -16,6 +16,7 @@ export interface Project {
     live: string;
     github: string;
   };
+  isPrivate?: boolean;
 }
 
 export const projects: Project[] = [
@@ -58,7 +59,8 @@ export const generateInvoice = async (tenantId: string) => {
     }
   });
 };`,
-    links: { live: 'https://restaprop.vercel.app', github: 'https://github.com/restafahlefi/restaprop' }
+    links: { live: '#', github: '#' },
+    isPrivate: true
   },
   {
     id: 'finflow',
@@ -98,7 +100,8 @@ export const useTransaction = () => {
 
   return { transactions, addExpense };
 };`,
-    links: { live: 'https://finflow-app.vercel.app', github: 'https://github.com/restafahlefi/finflow' }
+    links: { live: '#', github: '#' },
+    isPrivate: true
   },
   {
     id: 'eduvibe',
@@ -137,6 +140,7 @@ export const theme = {
     body: 'Inter-Regular'
   }
 };`,
-    links: { live: 'https://www.figma.com/community/file/eduvibe-case-study', github: 'https://github.com/restafahlefi/eduvibe' }
+    links: { live: '#', github: '#' },
+    isPrivate: true
   }
 ];

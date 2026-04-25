@@ -2,17 +2,19 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Globe, ShieldAlert } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { projects, Project } from '@/data/projects';
 import ProjectSpotlight from './ProjectSpotlight';
+import Toast from './Toast';
 
 const Projects = () => {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState<'all' | 'web' | 'mobile' | 'design'>('all');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isSpotlightOpen, setIsSpotlightOpen] = useState(false);
   const [spotlightTab, setSpotlightTab] = useState<'overview' | 'code'>('overview');
+  const [toast, setToast] = useState({ show: false, message: '', type: 'error' as 'success' | 'error' });
   const router = useRouter();
 
   const handleOpenSpotlight = (project: Project, tab: 'overview' | 'code' = 'overview') => {
@@ -21,12 +23,29 @@ const Projects = () => {
     setIsSpotlightOpen(true);
   };
 
+  const handleLinkClick = (e: React.MouseEvent, project: Project, type: 'live' | 'github') => {
+    if (project.isPrivate) {
+      e.preventDefault();
+      setToast({
+        show: true,
+        message: `Akses ditutup: Proyek ini bersifat Private/NDA.`,
+        type: 'error'
+      });
+    }
+  };
+
   const filteredProjects = filter === 'all' 
     ? projects 
     : projects.filter(p => p.category === filter);
 
   return (
     <section id="projects" className="py-32 relative overflow-hidden bg-black/40">
+      <Toast 
+        isVisible={toast.show} 
+        message={toast.message} 
+        type={toast.type} 
+        onClose={() => setToast(prev => ({ ...prev, show: false }))} 
+      />
       <div className="container mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -127,6 +146,7 @@ const Projects = () => {
                                         href={project.links.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        onClick={(e) => handleLinkClick(e, project, 'live')}
                                         className="flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-[10px] font-black uppercase tracking-widest text-white transition-all active:scale-95 shadow-lg shadow-blue-600/20"
                                     >
                                         <ExternalLink size={14} />
@@ -136,6 +156,7 @@ const Projects = () => {
                                         href={project.links.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        onClick={(e) => handleLinkClick(e, project, 'github')}
                                         className="flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl text-[10px] font-black uppercase tracking-widest text-white transition-all active:scale-95"
                                     >
                                         <Github size={14} />
@@ -165,6 +186,7 @@ const Projects = () => {
         isOpen={isSpotlightOpen}
         initialTab={spotlightTab}
         onClose={() => setIsSpotlightOpen(false)}
+        onLinkClick={handleLinkClick}
       />
     </section>
   );

@@ -10,10 +10,11 @@ interface ProjectSpotlightProps {
   project: Project | null;
   isOpen: boolean;
   onClose: () => void;
+  onLinkClick: (e: React.MouseEvent, project: Project, type: 'live' | 'github') => void;
   initialTab?: 'overview' | 'code';
 }
 
-const ProjectSpotlight = ({ project, isOpen, onClose, initialTab = 'overview' }: ProjectSpotlightProps) => {
+const ProjectSpotlight = ({ project, isOpen, onClose, onLinkClick, initialTab = 'overview' }: ProjectSpotlightProps) => {
   const [activeTab, setActiveTab] = React.useState<'overview' | 'code'>(initialTab);
   const [activeImage, setActiveImage] = React.useState(0);
 
@@ -282,6 +283,7 @@ const ProjectSpotlight = ({ project, isOpen, onClose, initialTab = 'overview' }:
                             href={project.links.github}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={(e) => onLinkClick(e, project, 'github')}
                             className="flex-grow flex items-center justify-center gap-3 py-4 bg-white/5 hover:bg-white/10 rounded-2xl font-black text-xs uppercase tracking-widest transition-all border border-white/10 text-white"
                         >
                             <Github size={18} />
@@ -291,6 +293,7 @@ const ProjectSpotlight = ({ project, isOpen, onClose, initialTab = 'overview' }:
                             href={project.links.live}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={(e) => onLinkClick(e, project, 'live')}
                             className="flex-grow flex items-center justify-center gap-3 py-4 bg-blue-600 hover:bg-blue-700 rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-xl shadow-blue-600/20 text-white"
                         >
                             <Globe size={18} />

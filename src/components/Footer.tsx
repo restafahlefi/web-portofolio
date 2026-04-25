@@ -76,11 +76,11 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-6">
             <div className="text-[10px] text-zinc-500 flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-zinc-700" />
+                <span className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
                 V2.4.0-Stable
             </div>
             <div className="text-[10px] text-zinc-500 flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-zinc-700" />
+                <span className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
                 System Healthy
             </div>
           </div>
