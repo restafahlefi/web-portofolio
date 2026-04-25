@@ -278,24 +278,24 @@ const ProjectSpotlight = ({ project, isOpen, onClose, initialTab = 'overview' }:
                     )}
 
                     <div className="pt-8 border-t border-white/5 flex gap-4">
-                        <button 
-                            onClick={() => {
-                                alert("System: Initiating secure handshake with GitHub API...\nStatus: Access Restricted to Verified Recruiters.");
-                            }}
-                            className="flex-grow flex items-center justify-center gap-3 py-4 bg-white/5 hover:bg-white/10 rounded-2xl font-black text-xs uppercase tracking-widest transition-all border border-white/10"
+                        <a 
+                            href={project.links.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-grow flex items-center justify-center gap-3 py-4 bg-white/5 hover:bg-white/10 rounded-2xl font-black text-xs uppercase tracking-widest transition-all border border-white/10 text-white"
                         >
                             <Github size={18} />
                             Full Repo
-                        </button>
-                        <button 
-                            onClick={() => {
-                                alert("Production Server: 104.21.32.128\nStatus: Online & Healthy\nLatency: 24ms\n\nRedirecting to secure mirror...");
-                            }}
-                            className="flex-grow flex items-center justify-center gap-3 py-4 bg-blue-600 hover:bg-blue-700 rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-xl shadow-blue-600/20"
+                        </a>
+                        <a 
+                            href={project.links.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-grow flex items-center justify-center gap-3 py-4 bg-blue-600 hover:bg-blue-700 rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-xl shadow-blue-600/20 text-white"
                         >
                             <Globe size={18} />
                             Live App
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

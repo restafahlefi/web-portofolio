@@ -58,7 +58,7 @@ export const generateInvoice = async (tenantId: string) => {
     }
   });
 };`,
-    links: { live: '#', github: '#' }
+    links: { live: 'https://restaprop.vercel.app', github: 'https://github.com/restafahlefi/restaprop' }
   },
   {
     id: 'finflow',
@@ -98,7 +98,7 @@ export const useTransaction = () => {
 
   return { transactions, addExpense };
 };`,
-    links: { live: '#', github: '#' }
+    links: { live: 'https://finflow-app.vercel.app', github: 'https://github.com/restafahlefi/finflow' }
   },
   {
     id: 'eduvibe',
@@ -137,6 +137,6 @@ export const theme = {
     body: 'Inter-Regular'
   }
 };`,
-    links: { live: '#', github: '#' }
+    links: { live: 'https://www.figma.com/community/file/eduvibe-case-study', github: 'https://github.com/restafahlefi/eduvibe' }
   }
 ];
