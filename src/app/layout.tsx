@@ -16,14 +16,14 @@ const mono = MonoFont({
 });
 
 export const metadata: Metadata = {
-  title: "Resta Fahlefi | Fullstack Software Engineer",
-  description: "Portfolio profesional Mochamad Resta Fahlefi. Membangun aplikasi web modern dengan Next.js, Node.js, dan arsitektur sistem yang scalable.",
-  keywords: ["Software Engineer", "Fullstack Developer", "React Developer", "Next.js Portfolio", "Resta Fahlefi"],
+  title: "Resta Fahlefi | Senior Software Engineer",
+  description: "Portfolio Mochamad Resta Fahlefi, Senior Software Engineer Jakarta. 5+ tahun, 50+ project, 20+ klien. Spesialis React, Next.js, Node.js.",
+  keywords: ["Senior Software Engineer", "Fullstack Developer", "React Developer", "Next.js Portfolio", "Jakarta Developer", "Resta Fahlefi"],
   openGraph: {
-    title: "Resta Fahlefi | Fullstack Software Engineer",
-    description: "Membangun solusi digital modern dan arsitektur backend scalable.",
+    title: "Resta Fahlefi | Senior Software Engineer",
+    description: "Senior Software Engineer Jakarta. 5+ tahun membangun produk SaaS dengan Next.js & Node.js.",
     type: "website",
-    url: "https://restafahlefi.dev",
+    url: "https://mrestafahlefi.vercel.app",
     images: [
       {
         url: "/assets/images/og-image.png",

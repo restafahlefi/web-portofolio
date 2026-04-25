@@ -2,6 +2,7 @@ import TerminalLoadingScreen from "@/components/TerminalLoadingScreen";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Certificates from "@/components/Certificates";
 import Testimonials from "@/components/Testimonials";
@@ -28,6 +29,7 @@ export default function Home() {
       <div className="flex flex-col">
         <Hero />
         <About />
+        <Experience />
         <Projects />
         <Certificates />
         <Testimonials />
