@@ -24,13 +24,24 @@ const Projects = () => {
   };
 
   const handleLinkClick = (e: React.MouseEvent, project: Project, type: 'live' | 'github') => {
-    if (project.isPrivate) {
+    const link = type === 'live' ? project.links.live : project.links.github;
+
+    if (project.isPrivate || link === '#') {
       e.preventDefault();
-      setToast({
-        show: true,
-        message: `Akses ditutup: Proyek ini bersifat Private/NDA.`,
-        type: 'error'
-      });
+      
+      if (project.isPrivate) {
+        setToast({
+          show: true,
+          message: `Akses ditutup: Proyek ini bersifat Private/NDA.`,
+          type: 'error'
+        });
+      } else {
+        setToast({
+          show: true,
+          message: `Link demo/source code belum tersedia untuk proyek ini.`,
+          type: 'error'
+        });
+      }
     }
   };
 
