@@ -134,7 +134,8 @@ const Projects = () => {
 
                             {/* Content */}
                             <div className="p-10 flex flex-col flex-grow">
-                                <div className="flex flex-wrap gap-2.5 mb-6">
+                                {/* Fixed height for tags to ensure titles align */}
+                                <div className="flex flex-wrap gap-2.5 mb-6 min-h-[64px] content-start">
                                     {project.tags.map(tag => {
                                         const iconMap: { [key: string]: string } = {
                                             'Next.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
@@ -144,6 +145,9 @@ const Projects = () => {
                                             'Tailwind': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
                                             'Firebase': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
                                             'Figma': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+                                            'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+                                            'MongoDB': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+                                            'TypeScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
                                         };
                                         const icon = iconMap[tag];
                                         return (
@@ -154,41 +158,43 @@ const Projects = () => {
                                         );
                                     })}
                                 </div>
+                                
                                 <h3 
                                     onClick={() => handleOpenSpotlight(project)}
-                                    className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors leading-tight cursor-pointer"
+                                    className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors leading-tight cursor-pointer line-clamp-2 min-h-[3.5rem]"
                                 >
                                     {project.title}
                                 </h3>
-                                <p className="text-zinc-500 text-sm leading-relaxed mb-8 line-clamp-3">
+                                
+                                <p className="text-zinc-500 text-sm leading-relaxed mb-8 line-clamp-3 flex-grow">
                                     {project.description}
                                 </p>
 
-                                {/* Action Buttons */}
-                                <div className="grid grid-cols-2 gap-3 mb-8 relative z-20">
-                                    <a 
-                                        href={project.links.live}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        onClick={(e) => handleLinkClick(e, project, 'live')}
-                                        className="flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-[10px] font-black uppercase tracking-widest text-white transition-all active:scale-95 shadow-lg shadow-blue-600/20"
-                                    >
-                                        <ExternalLink size={14} />
-                                        <span>Live Demo</span>
-                                    </a>
-                                    <a 
-                                        href={project.links.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        onClick={(e) => handleLinkClick(e, project, 'github')}
-                                        className="flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl text-[10px] font-black uppercase tracking-widest text-white transition-all active:scale-95"
-                                    >
-                                        <Github size={14} />
-                                        <span>Source Code</span>
-                                    </a>
-                                </div>
-
+                                {/* Action Buttons - Pushed to bottom */}
                                 <div className="mt-auto">
+                                    <div className="grid grid-cols-2 gap-3 mb-8 relative z-20">
+                                        <a 
+                                            href={project.links.live}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={(e) => handleLinkClick(e, project, 'live')}
+                                            className="flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-[10px] font-black uppercase tracking-widest text-white transition-all active:scale-95 shadow-lg shadow-blue-600/20"
+                                        >
+                                            <ExternalLink size={14} />
+                                            <span>Live Demo</span>
+                                        </a>
+                                        <a 
+                                            href={project.links.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={(e) => handleLinkClick(e, project, 'github')}
+                                            className="flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl text-[10px] font-black uppercase tracking-widest text-white transition-all active:scale-95"
+                                        >
+                                            <Github size={14} />
+                                            <span>Source Code</span>
+                                        </a>
+                                    </div>
+
                                     <div 
                                         onClick={() => handleOpenSpotlight(project)}
                                         className="group/link inline-flex items-center gap-2 text-white font-bold text-sm tracking-wide cursor-pointer"
