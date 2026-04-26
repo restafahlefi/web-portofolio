@@ -63,7 +63,9 @@ const Navbar = () => {
             {socialLinks.map((social, i) => (
               <a 
                 key={i} 
-                href={social.href} 
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-white transition-colors"
               >
                 {social.icon}
@@ -111,7 +113,7 @@ const Navbar = () => {
 
             <div className="pt-10 border-t border-white/5 flex gap-6">
               {socialLinks.map((social, i) => (
-                <a key={i} href={social.href} className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-zinc-400">
+                <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-zinc-400 hover:bg-blue-500/10 hover:text-white transition-all">
                   {social.icon}
                 </a>
               ))}

@@ -9,6 +9,8 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import BackgroundCanvas from "@/components/BackgroundCanvas";
+import ScrollProgress from "@/components/ScrollProgress";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -19,11 +21,17 @@ export default function Home() {
       {/* 2. Interactive Background Canvas */}
       <BackgroundCanvas />
       
-      {/* 3. Base Dark Layer */}
+      {/* 3. Scroll Progress Bar */}
+      <ScrollProgress />
+      
+      {/* 4. Base Dark Layer */}
       <div className="fixed inset-0 -z-30 bg-[#0a0a0f]" />
       
-      {/* 4. Navigation */}
+      {/* 5. Navigation */}
       <Navbar />
+      
+      {/* 6. Back to Top Button */}
+      <BackToTop />
       
       {/* 5. Main Content Sections */}
       <div className="flex flex-col">
