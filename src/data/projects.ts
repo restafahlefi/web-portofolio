@@ -142,5 +142,71 @@ export const theme = {
 };`,
     links: { live: '#', github: '#' },
     isPrivate: true
+  },
+  {
+    id: 'technusa-dashboard',
+    title: 'TechNusa — Enterprise Resource Planning',
+    category: 'web',
+    image: '/assets/images/projects/technusa.png',
+    images: ['/assets/images/projects/technusa.png'],
+    description: 'Dashboard ERP kompleks untuk manajemen sumber daya perusahaan dengan arsitektur micro-frontend.',
+    fullDescription: 'Proyek utama di TechNusa yang melibatkan migrasi sistem monolitik ke micro-frontend. Mengelola data karyawan, penggajian, dan performa dalam satu platform terintegrasi.',
+    features: [
+      'Micro-frontend Architecture',
+      'Real-time Analytics Dashboard',
+      'Advanced Role-based Access Control',
+      'Payroll & Attendance System'
+    ],
+    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind'],
+    year: '2024',
+    status: 'In Production',
+    fileTree: ['packages/shell/src', 'packages/auth/src', 'packages/payroll/src'],
+    codeSnippet: `// Micro-frontend Load Example\nconst RemoteApp = React.lazy(() => import('payroll/App'));`,
+    links: { live: '#', github: '#' },
+    isPrivate: true
+  },
+  {
+    id: 'luxecart',
+    title: 'LuxeCart — Premium E-Commerce',
+    category: 'web',
+    image: '/assets/images/projects/luxecart.png',
+    images: ['/assets/images/projects/luxecart.png'],
+    description: 'Platform e-commerce premium dengan integrasi pembayaran Midtrans dan manajemen stok otomatis.',
+    fullDescription: 'Membangun pengalaman belanja yang mewah dengan performa tinggi. Fokus pada kecepatan load dan alur checkout yang mulus.',
+    features: [
+      'Midtrans Payment Integration',
+      'Inventory Management System',
+      'SEO Optimized Product Pages',
+      'Automated Email Invoices'
+    ],
+    tags: ['Node.js', 'Express', 'MongoDB', 'React'],
+    year: '2023',
+    status: 'Completed',
+    fileTree: ['api/routes/payment.js', 'client/src/pages/Checkout.tsx'],
+    codeSnippet: `// Midtrans Integration\nconst snap = new midtransClient.Snap({ ... });`,
+    links: { live: '#', github: '#' },
+    isPrivate: false
+  },
+  {
+    id: 'smart-inventory',
+    title: 'SmartInventory — B2B Supply Chain',
+    category: 'web',
+    image: '/assets/images/projects/inventory.png',
+    images: ['/assets/images/projects/inventory.png'],
+    description: 'Sistem manajemen rantai pasok untuk klien B2B skala menengah.',
+    fullDescription: 'Membantu bisnis mengelola stok barang di berbagai gudang secara real-time dengan notifikasi otomatis saat stok menipis.',
+    features: [
+      'Multi-warehouse Tracking',
+      'Low Stock Alerts',
+      'Supplier Management',
+      'Detailed Export Reports'
+    ],
+    tags: ['Node.js', 'MongoDB', 'Chart.js'],
+    year: '2022',
+    status: 'Completed',
+    fileTree: ['src/models/Inventory.js', 'src/controllers/ReportController.js'],
+    codeSnippet: `// Stock Alert Logic\nif (item.quantity < item.minThreshold) sendAlert(item.name);`,
+    links: { live: '#', github: '#' },
+    isPrivate: true
   }
 ];
