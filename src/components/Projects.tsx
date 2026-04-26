@@ -134,8 +134,8 @@ const Projects = () => {
 
                             {/* Content */}
                             <div className="p-10 flex flex-col flex-grow">
-                                {/* Fixed height for tags to ensure titles align (enough for 2 rows) */}
-                                <div className="flex flex-wrap gap-2.5 mb-6 min-h-[90px] content-start">
+                                {/* Fixed height for tags to ensure titles align perfectly */}
+                                <div className="flex flex-wrap gap-2.5 mb-6 h-[90px] content-start overflow-hidden">
                                     {project.tags.map(tag => {
                                         const iconMap: { [key: string]: string } = {
                                             'Next.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
