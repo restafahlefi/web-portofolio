@@ -185,7 +185,7 @@ export const theme = {
     fileTree: ['api/routes/payment.js', 'client/src/pages/Checkout.tsx'],
     codeSnippet: `// Midtrans Integration\nconst snap = new midtransClient.Snap({ ... });`,
     links: { live: '#', github: '#' },
-    isPrivate: false
+    isPrivate: true
   },
   {
     id: 'smart-inventory',
