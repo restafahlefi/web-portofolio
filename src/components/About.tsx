@@ -46,7 +46,7 @@ export default function About() {
                     'Halo! Saya Mochamad Resta Fahlefi, seorang Senior Software Engineer berbasis di Jakarta.\n\nSelama 5+ tahun terakhir, saya fokus membangun produk SaaS end-to-end untuk startup & enterprise. Dari ide di Figma sampai production di AWS/GCP, saya yang pegang.\n\nSaya terobsesi dengan 3 hal: Clean Architecture, Core Web Vitals 90+, dan Developer Experience. Karena kode yang bagus harus cepat untuk user dan enak dibaca oleh tim.\n\nSaat ini saya membantu tim sebagai Tech Lead: mentoring 4+ engineer, code review, dan bikin sistem yang bisa scale dari 0 ke 1 juta user.',
                   ]}
                   wrapper="div"
-                  speed={70}
+                  speed={85}
                   className="text-gray-300 leading-relaxed whitespace-pre-line text-lg"
                   repeat={0}
                   cursor={true}

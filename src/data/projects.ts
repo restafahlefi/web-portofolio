@@ -24,9 +24,9 @@ export const projects: Project[] = [
     id: 'restaprop',
     title: 'RestaProp — Property Management System',
     category: 'web',
-    image: 'https://picsum.photos/id/0/1200/800',
+    image: '/assets/images/projects/restaprop.png',
     images: [
-      'https://picsum.photos/id/0/1200/800',
+      '/assets/images/projects/restaprop.png',
       'https://picsum.photos/id/20/1200/800',
       'https://picsum.photos/id/119/1200/800'
     ],
@@ -66,9 +66,9 @@ export const generateInvoice = async (tenantId: string) => {
     id: 'finflow',
     title: 'FinFlow — Intelligent Finance Tracker',
     category: 'mobile',
-    image: 'https://picsum.photos/id/160/1200/800',
+    image: '/assets/images/projects/finflow.png',
     images: [
-      'https://picsum.photos/id/160/1200/800',
+      '/assets/images/projects/finflow.png',
       'https://picsum.photos/id/3/1200/800',
       'https://picsum.photos/id/2/1200/800'
     ],
@@ -107,9 +107,9 @@ export const useTransaction = () => {
     id: 'eduvibe',
     title: 'EduVibe — E-Learning UX Case Study',
     category: 'design',
-    image: 'https://picsum.photos/id/48/1200/800',
+    image: '/assets/images/projects/eduvibe.png',
     images: [
-      'https://picsum.photos/id/48/1200/800',
+      '/assets/images/projects/eduvibe.png',
       'https://picsum.photos/id/24/1200/800',
       'https://picsum.photos/id/60/1200/800'
     ],

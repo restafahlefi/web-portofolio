@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, Globe, ShieldAlert } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { projects, Project } from '@/data/projects';
@@ -123,12 +123,25 @@ const Projects = () => {
 
                             {/* Content */}
                             <div className="p-10 flex flex-col flex-grow">
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {project.tags.map(tag => (
-                                        <span key={tag} className="px-3 py-1 rounded-lg bg-white/5 border border-white/5 text-blue-400 text-[10px] font-black uppercase tracking-widest">
-                                            {tag}
-                                        </span>
-                                    ))}
+                                <div className="flex flex-wrap gap-2.5 mb-6">
+                                    {project.tags.map(tag => {
+                                        const iconMap: { [key: string]: string } = {
+                                            'Next.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+                                            'React Native': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                                            'PostgreSQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+                                            'Prisma': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg',
+                                            'Tailwind': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+                                            'Firebase': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+                                            'Figma': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+                                        };
+                                        const icon = iconMap[tag];
+                                        return (
+                                            <span key={tag} className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/5 text-blue-400 text-[10px] font-black uppercase tracking-widest group-hover:border-blue-500/30 transition-all shadow-sm">
+                                                {icon && <img src={icon} alt={tag} className="w-3.5 h-3.5 brightness-125" />}
+                                                {tag}
+                                            </span>
+                                        );
+                                    })}
                                 </div>
                                 <h3 
                                     onClick={() => handleOpenSpotlight(project)}
